@@ -1,0 +1,242 @@
+{
+  "games": [
+    {
+      "round1": {
+        "date": "9/01",
+        "team1": "U1",
+        "team2": "U4",
+        "time": "9:30 a.m.",
+        "location": "AJ Katzenmaier",
+        "address": "1829 Kennedy Dr, North Chicago, IL 60088, USA",
+        "link": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11799.124204343156!2d-87.8627401!3d42.3258685!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcf2bbe275c6da815!2sA+J+Katzenmaier+Elementary+School!5e0!3m2!1sen!2snl!4v1541506942928"
+      },
+      "round2": {
+        "date": "9/01",
+        "team1": "U3",
+        "team2": "U2",
+        "time": "1:00 p.m",
+        "location": "Greenbay",
+        "address": "N Orleans St, Chicago, IL 60614, USA",
+        "link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.022981686595!2d-87.64002218455776!3d41.913864679219344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3407260c45b%3A0xb351205fae50c6f3!2sGreenbay+Elementary!5e0!3m2!1sen!2snl!4v1541507221485"
+      }
+    },
+    {
+      "round1": {
+        "date": "9/08",
+        "team1": "U5",
+        "team2": "U6",
+        "time": "9:30 a.m.",
+        "location": "Howard A Yeager",
+        "address": "1811 Morrow Ave, North Chicago, IL 60064, USA",
+        "link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.270062631387!2d-87.85606978454513!3d42.3154382791899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880feccac26b07c5%3A0x8b51fa5d6efe771a!2sHoward+A.+Yeager+School+(PREK-K)!5e0!3m2!1sen!2snl!4v1541507729035"
+      },
+      "round2": {
+        "date": "9/08",
+        "team1": "U6",
+        "team2": "U1",
+        "time": "1:00 p.m.",
+        "location": "Marjorie P Hart",
+        "address": "North Chicago, IL 60064, USA",
+        "link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.720311570161!2d-87.84787868454474!3d42.32716387918911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fecd0628e1bb5%3A0x9a4d5f9aafd42e02!2sMarjorie+P+Hart+Elementary+School!5e0!3m2!1sen!2snl!4v1541507923196"
+      }
+    },
+    {
+      "round1": {
+        "date": "9/15",
+        "team1": "U2",
+        "team2": "U4",
+        "time": "9:30 a.m.",
+        "location": "North",
+        "address": "4338 W Wabanasia Ave, Chicago, IL 60639, USA",
+        "link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d379081.08442549093!2d-88.00588225220834!3d42.073814600195476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fcd2725517251%3A0x9563e144a7a71eab!2sNorth-Grand+High+School!5e0!3m2!1sen!2snl!4v1541508610957"
+      },
+      "round2": {
+        "date": "9/15",
+        "team1": "U3",
+        "team2": "U5",
+        "time": "1:00 p.m.",
+        "location": "AJ Katzenmaier",
+        "address": "1829 Kennedy Dr, North Chicago, IL 60088, USA",
+        "link": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11799.124204343156!2d-87.8627401!3d42.3258685!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcf2bbe275c6da815!2sA+J+Katzenmaier+Elementary+School!5e0!3m2!1sen!2snl!4v1541506942928"
+      }
+    },
+    {
+      "round1": {
+        "date": "9/22",
+        "team1": "U1",
+        "team2": "U3",
+        "time": "9:30 a.m",
+        "location": "South",
+        "address": "1212 S Plymouth Ct, Chicago, IL 60605, USA",
+        "link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95169.89050258468!2d-87.68391988941679!3d41.805487728275395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c9a9e2172c9%3A0xf8e1705680f94707!2sSouth+Loop+Elementary+School!5e0!3m2!1sen!2snl!4v1541509230742"
+      },
+      "round2": {
+        "date": "9/22",
+        "team1": "U2",
+        "team2": "U6",
+        "time": "1:00 p.m",
+        "location": "Howard A Yeager",
+        "address": "1811 Morrow Ave, North Chicago, IL 60064, USA",
+        "link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.270062631387!2d-87.85606978454513!3d42.3154382791899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880feccac26b07c5%3A0x8b51fa5d6efe771a!2sHoward+A.+Yeager+School+(PREK-K)!5e0!3m2!1sen!2snl!4v1541507729035"
+      }
+    },
+    {
+      "round1": {
+        "date": "9/29",
+        "team1": "U4",
+        "team2": "U5",
+        "time": "9:30 a.m.",
+        "location": "Greenbay",
+        "address": "N Orleans St, Chicago, IL 60614, USA",
+        "link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.022981686595!2d-87.64002218455776!3d41.913864679219344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3407260c45b%3A0xb351205fae50c6f3!2sGreenbay+Elementary!5e0!3m2!1sen!2snl!4v1541507221485"
+      },
+      "round2": {}
+    },
+    {
+      "round1": {
+        "date": "10/06",
+        "team1": "U2",
+        "team2": "U5",
+        "time": "9:30 a.m",
+        "location": "Marjorie P Hart",
+        "address": "North Chicago, IL 60064, USA",
+        "link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.720311570161!2d-87.84787868454474!3d42.32716387918911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fecd0628e1bb5%3A0x9a4d5f9aafd42e02!2sMarjorie+P+Hart+Elementary+School!5e0!3m2!1sen!2snl!4v1541507923196"
+      },
+      "round2": {
+        "date": "10/06",
+        "team1": "U1",
+        "team2": "U6",
+        "time": "1:00 p.m.",
+        "location": "South",
+        "address": "1212 S Plymouth Ct, Chicago, IL 60605, USA",
+        "link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95169.89050258468!2d-87.68391988941679!3d41.805487728275395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c9a9e2172c9%3A0xf8e1705680f94707!2sSouth+Loop+Elementary+School!5e0!3m2!1sen!2snl!4v1541509230742"
+      }
+    },
+    {
+      "round1": {
+        "date": "10/08",
+        "team1": "U3",
+        "team2": "U4",
+        "time": "9:30 a.m.",
+        "location": "Howard A Yeager",
+        "address": "1811 Morrow Ave, North Chicago, IL 60064, USA",
+        "link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.270062631387!2d-87.85606978454513!3d42.3154382791899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880feccac26b07c5%3A0x8b51fa5d6efe771a!2sHoward+A.+Yeager+School+(PREK-K)!5e0!3m2!1sen!2snl!4v1541507729035"
+      },
+      "round2": {
+        "date": "10/08",
+        "team1": "U5",
+        "team2": "U1",
+        "time": "1:00 p.m.",
+        "location": "Greenbay",
+        "address": "N Orleans St, Chicago, IL 60614, USA",
+        "link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.022981686595!2d-87.64002218455776!3d41.913864679219344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3407260c45b%3A0xb351205fae50c6f3!2sGreenbay+Elementary!5e0!3m2!1sen!2snl!4v1541507221485"
+      }
+    },
+    {
+      "round1": {
+        "date": "10/20",
+        "team1": "U6",
+        "team2": "U3",
+        "time": "9:30 a.m.",
+        "location": "North",
+        "address": "4338 W Wabanasia Ave, Chicago, IL 60639, USA",
+        "link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d379081.08442549093!2d-88.00588225220834!3d42.073814600195476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fcd2725517251%3A0x9563e144a7a71eab!2sNorth-Grand+High+School!5e0!3m2!1sen!2snl!4v1541508610957"
+      },
+      "round2": {
+        "date": "10/20",
+        "team1": "U2",
+        "team2": "U4",
+        "time": "1:00 p.m.",
+        "location": "Marjorie P Hart",
+        "address": "North Chicago, IL 60064, USA",
+        "link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.720311570161!2d-87.84787868454474!3d42.32716387918911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fecd0628e1bb5%3A0x9a4d5f9aafd42e02!2sMarjorie+P+Hart+Elementary+School!5e0!3m2!1sen!2snl!4v1541507923196"
+      }
+    },
+    {
+      "round1": {
+        "date": "10/27",
+        "team1": "U3",
+        "team2": "U1",
+        "time": "9:30 a.m.",
+        "location": "AJ Katzenmaier",
+        "address": "1829 Kennedy Dr, North Chicago, IL 60088, USA",
+        "link": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11799.124204343156!2d-87.8627401!3d42.3258685!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcf2bbe275c6da815!2sA+J+Katzenmaier+Elementary+School!5e0!3m2!1sen!2snl!4v1541506942928"
+      },
+      "round2": {
+        "date": "10/27",
+        "team1": "U5",
+        "team2": "U6",
+        "time": "1:00 p.m.",
+        "location": "Howard A Yeager",
+        "address": "1811 Morrow Ave, North Chicago, IL 60064, USA",
+        "link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.270062631387!2d-87.85606978454513!3d42.3154382791899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880feccac26b07c5%3A0x8b51fa5d6efe771a!2sHoward+A.+Yeager+School+(PREK-K)!5e0!3m2!1sen!2snl!4v1541507729035"
+      }
+    }
+  ],
+  "teams": [
+    {
+      "team": [
+        {
+          "name": "U1",
+          "logo": "src/U1.png"
+        },
+        {
+          "name": "U2",
+          "logo": "src/U2.png"
+        },
+        {
+          "name": "U3",
+          "logo": "src/U3.png"
+        },
+        {
+          "name": "U4",
+          "logo": "src/U4.png"
+        },
+        {
+          "name": "U5",
+          "logo": "src/U5.png"
+        },
+        {
+          "name": "U6",
+          "logo": "src/U6.png"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "map": [
+        {
+          "address": "1811 Morrow Ave, North Chicago, IL 60064, USA",
+          "link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.270062631387!2d-87.85606978454513!3d42.3154382791899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880feccac26b07c5%3A0x8b51fa5d6efe771a!2sHoward+A.+Yeager+School+(PREK-K)!5e0!3m2!1sen!2snl!4v1541507729035",
+          "location": "Howard A Yeager"
+        },
+        {
+          "address": "1811 Morrow Ave, North Chicago, IL 60064, USA",
+          "link": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11799.124204343156!2d-87.8627401!3d42.3258685!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcf2bbe275c6da815!2sA+J+Katzenmaier+Elementary+School!5e0!3m2!1sen!2snl!4v1541506942928",
+          "location": "AJ Katzenmaier"
+        },
+        {
+          "location": "Marjorie P Hart",
+          "address": "North Chicago, IL 60064, USA",
+          "link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.720311570161!2d-87.84787868454474!3d42.32716387918911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fecd0628e1bb5%3A0x9a4d5f9aafd42e02!2sMarjorie+P+Hart+Elementary+School!5e0!3m2!1sen!2snl!4v1541507923196"
+        },
+        {
+          "location": "North",
+          "address": "4338 W Wabanasia Ave, Chicago, IL 60639, USA",
+          "link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d379081.08442549093!2d-88.00588225220834!3d42.073814600195476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fcd2725517251%3A0x9563e144a7a71eab!2sNorth-Grand+High+School!5e0!3m2!1sen!2snl!4v1541508610957"
+        },
+        {
+          "location": "Greenbay",
+          "address": "N Orleans St, Chicago, IL 60614, USA",
+          "link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.022981686595!2d-87.64002218455776!3d41.913864679219344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3407260c45b%3A0xb351205fae50c6f3!2sGreenbay+Elementary!5e0!3m2!1sen!2snl!4v1541507221485"
+        },
+        {
+          "location": "South",
+          "address": "1212 S Plymouth Ct, Chicago, IL 60605, USA",
+          "link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95169.89050258468!2d-87.68391988941679!3d41.805487728275395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c9a9e2172c9%3A0xf8e1705680f94707!2sSouth+Loop+Elementary+School!5e0!3m2!1sen!2snl!4v1541509230742"
+        }
+      ]
+    }
+  ]
+}

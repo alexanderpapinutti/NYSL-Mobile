@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1,
+width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.7gxsQ__2-w0.O/m=gapi_iframes/rt=j/sv=1/d=1/ed=1/am=QQ/rs=AGLTcCNZCqRUyd6YadCthPh1POgmR6qFwQ/cb=gapi.loaded_0" async=""></script>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+
+</head>
+
+<body class="container">
+    <div id="app">
+        <div id="index_page" v-if="currentView == 'index'">
+            <div class="top_side_index">
+                <h1>NYSL</h1>
+                <img src="src/nysl_logo.png" class="logo">
+            </div>
+            <div class="all_buttons">
+                <div class="wrapper">
+                    <div class="btn">
+                        <button type="button" class="btn-primary" id="schedule" v-on:click="setCurrentView('schedule')">Schedule<img class="widget" src="src/green-icon.png"></button>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="btn">
+                        <button type="button" class="btn-primary" id="schedule" v-on:click="setCurrentView('all_teams')">All Teams<img class="widget" src="src/teamwork.png"></button>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="btn">
+                        <button type="button" class="btn-primary" id="contact" v-on:click="setCurrentView('contact')">Contact Us<img class="widget" src="src/phone-receiver.png"></button>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="btn">
+                        <button type="button" class="btn-primary" id="chat" v-on:click="setCurrentView('chat')">Chat<img class="widget" src="src/comments.png"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="schedule_page" v-if="currentView == 'schedule'">
+            <div class="top_side_page">
+
+
+
+                <div class="top_tab">
+                    <div class="sub_title">
+                        <h1 class="page_title">Schedule</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="table_page_content">
+                <div class="team_dropdown">
+                    <nav>
+                        <ul>
+                            <li><a>Select Team:</a>
+
+                                <ul>
+                                    <li><a href='javascript:;' v-on:click="showFullTable">Show All</a></li>
+                                    <li><a v-for="team in teams" :class="team" href='javascript:;' v-on:click='filterTeam(team)' :value="team">{{team}}</a></li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="my_table">
+                    <div class="scrollable">
+                        <table class="table table-striped table-dark text-center" id="table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Teams</th>
+                                    <th>Location</th>
+                                    <th>Time</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="game in rows" v-show="fullTable">
+                                    <td>{{game.date}}</td>
+                                    <td>{{game.team1}} and {{game.team2}}</td>
+                                    <td><button id="mapid" class="my_new_button" v-on:click="setCurrentMap('location',game.location)">{{game.location}}</button></td>
+                                    <td>{{game.time}}</td>
+
+                                </tr>
+                                <tr v-for="game in newTeamArray" v-show="teamFilter">
+                                    <td>{{game.date}}</td>
+                                    <td>{{game.team1}} and {{game.team2}}</td>
+                                    <td><button id="mapid" class="my_new_button" v-on:click="setCurrentMap('location',game.location)">{{game.location}}</button></td>
+                                    <td>{{game.time}}</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="bottom_page">
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('index')"><img class="dropdown_widget" src="src/home.png"></a>
+                </div>
+                <div class="home_div_dark">
+                    <a v-on:click="setCurrentView('schedule')"><img class="widget" src="src/icon.png"></a>
+                </div>
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('all_teams')"><img class="dropdown_widget" src="src/white-teamwork.png"></a>
+                </div>
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('contact')"><img class="dropdown_widget" src="src/white-phone-receiver.png"></a>
+                </div>
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('chat')"><img class="dropdown_widget" src="src/dropdowncomments.png"></a>
+                </div>
+            </div>
+        </div>
+        <div id="contact_page" v-if="currentView == 'contact'">
+            <div class="top_side_page">
+                <div class="top_tab">
+                    <div class="sub_title">
+                        <h1 class="page_title">Contact Us</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="text">
+                <p class="my_text">Please e-mail us at <a href="mailto:nysl@chisoccer.org">nysl@chisoccer.org</a>. We will reply to your e-mail as soon as we can</p>
+
+            </div>
+            <div class="bottom_page">
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('index')"><img class="dropdown_widget" src="src/home.png"></a>
+                </div>
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('schedule')"><img class="widget" src="src/icon.png"></a>
+                </div>
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('all_teams')"><img class="dropdown_widget" src="src/white-teamwork.png"></a>
+                </div>
+                <div class="home_div_dark">
+                    <a v-on:click="setCurrentView('contact')"><img class="dropdown_widget" src="src/white-phone-receiver.png"></a>
+                </div>
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('chat')"><img class="dropdown_widget" src="src/dropdowncomments.png"></a>
+                </div>
+
+            </div>
+        </div>
+        <div id="all_teams_page" v-if="currentView == 'all_teams'">
+            <div class="top_side_page">
+                <div class="top_tab">
+                    <div class="sub_title">
+                        <h1 class="page_title">All Teams</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="my_teams_page">
+                <div class="team_logo" v-for="teams in allTeams">
+                    <div>
+                        <img class="logo_holder" v-bind:src="teams.logo" />
+                    </div>
+                    <div class="team_name">
+                        <button @click="setCurrentViewChat('team_chat',teams.name)" class="team_chat">
+                            <h4 class="my_teams">Chat with {{teams.name}}</h4>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom_page">
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('index')"><img class="dropdown_widget" src="src/home.png"></a>
+                </div>
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('schedule')"><img class="widget" src="src/icon.png"></a>
+                </div>
+                <div class="home_div_dark">
+                    <a v-on:click="setCurrentView('all_teams')"><img class="dropdown_widget" src="src/white-teamwork.png"></a>
+                </div>
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('contact')"><img class="dropdown_widget" src="src/white-phone-receiver.png"></a>
+                </div>
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('chat')"><img class="dropdown_widget" src="src/dropdowncomments.png"></a>
+                </div>
+
+            </div>
+        </div>
+        <div id="location_page" v-if="currentView == 'location'">
+            <div>
+            <div class="top_side_page">
+                <div class="top_tab">
+                    <div class="sub_title">
+                        <h1 class="page_title">Game Location</h1>
+                    </div>
+                </div>
+                
+            </div>
+                <div class="previous_page">
+                <a v-on:click="setCurrentView('schedule')"><img class="back_arrow" src="src/back-arrow.png"></a>
+
+            </div>
+            </div>
+            <div class="location_page_content">
+<!--
+            <div class="previous_page">
+                <a v-on:click="setCurrentView('schedule')"><img class="back_arrow" src="src/back-arrow.png"></a>
+            </div>
+-->
+            <div class="my_location_info">
+                <div class="map_frame">
+                    <iframe :src="locationPageLink"></iframe>
+                </div>
+                <div class="location_info">
+                    <p class="my_styling">Location: {{locationPageLocation}}</p>
+                    <p class="my_styling">Address: {{locationPageAddress}}</p>
+
+                </div>
+            </div>
+            </div>
+            <div class="bottom_page">
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('index')"><img class="dropdown_widget" src="src/home.png"></a>
+                </div>
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('schedule')"><img class="widget" src="src/icon.png"></a>
+                </div>
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('all_teams')"><img class="dropdown_widget" src="src/white-teamwork.png"></a>
+                </div>
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('contact')"><img class="dropdown_widget" src="src/white-phone-receiver.png"></a>
+                </div>
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('chat')"><img class="dropdown_widget" src="src/dropdowncomments.png"></a>
+                </div>
+
+            </div>
+        </div>
+        <div id="chat_page" v-if="currentView == 'chat'">
+            <div class="top_side_page">
+                <div class="top_tab">
+                    <div class="sub_title">
+                        <h1 class="page_title">Chat</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div id="body">
+                <div class="loaded1">
+                    <div class="login-logout">
+                        <button id="login" v-if="userLoged == false" @click="login('main-chat')">Log in</button>
+                        <button id="logout" v-if="userLoged == true" @click="logout()">Log out</button>
+                    </div>
+                    <div class="chat-window" id="chat-window">
+                        <div class="before-login" v-if="userLoged == false">
+                            Please Log In
+                        </div>
+                        <div class="loader" v-if="loadingPost == true">
+                            <div class="bubblingG">
+                                <span id="bubblingG_1"></span>
+                                <span id="bubblingG_2"></span>
+                                <span id="bubblingG_3"></span>
+                            </div>
+                        </div>
+                        <div class="each-post" v-if="userLoged == true" v-for="post in posts" :class="post.user">
+                            <div class="username-image">
+                                <div class="username">{{post.username}}</div>
+                                <div class="image">
+                                    <img class="profile-image" :src="post.image" alt="profile picture">
+                                </div>
+                            </div>
+                            <div class="post-text">
+                                {{post.text}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="submit-div" v-if="userLoged == true">
+                        <input type="text" id="write-txt">
+                        <button id="submit" @click="writeNewPost('main-chat')">Send</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="bottom_page">
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('index')"><img class="dropdown_widget" src="src/home.png"></a>
+                </div>
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('schedule')"><img class="widget" src="src/icon.png"></a>
+                </div>
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('all_teams')"><img class="dropdown_widget" src="src/white-teamwork.png"></a>
+                </div>
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('contact')"><img class="dropdown_widget" src="src/white-phone-receiver.png"></a>
+                </div>
+                <div class="home_div_dark">
+                    <a v-on:click="setCurrentView('chat')"><img class="dropdown_widget" src="src/dropdowncomments.png"></a>
+                </div>
+
+            </div>
+
+        </div>
+        <div id="chat_page_teams" v-if="currentView == 'team_chat'">
+            <div class="top_side_page">
+                <div class="top_tab">
+                    <div class="sub_title">
+                        <h1 class="page_title">Team Chat {{currentTeamChat}}</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div id="body">
+                <div class="loaded1">
+                    <div class="move">
+                    <div class="previous_page">
+                            <a v-on:click="setCurrentView('all_teams')"><img class="back_arrow" src="src/back-arrow.png"></a>
+                        </div>
+                    
+
+                        
+                        </div>
+                        
+                    <div class="login-logout">
+                            <button id="login" v-if="userLoged == false" @click="login(currentTeamChat)">Log in</button>
+                            <button id="logout" v-if="userLoged == true" @click="logout()">Log out</button>
+                        </div>
+                    
+                    <div class="chat-window" id="chat-window">
+                        <div class="before-login" v-if="userLoged == false">
+                            Please Log In
+                        </div>
+                        <div class="loader" v-if="loadingPost == true">
+                            <div class="bubblingG">
+                                <span id="bubblingG_1"></span>
+                                <span id="bubblingG_2"></span>
+                                <span id="bubblingG_3"></span>
+                            </div>
+                        </div>
+                        <div class="each-post" v-if="userLoged == true" v-for="post in posts" :class="post.user">
+                            <div class="username-image">
+                                <div class="username">{{post.username}}</div>
+                                <div class="image">
+                                    <img class="profile-image" :src="post.image" alt="profile picture">
+                                </div>
+                            </div>
+                            <div class="post-text">
+                                {{post.text}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="submit-div" v-if="userLoged == true">
+                        <input type="text" id="write-txt">
+                        <button id="submit" @click="writeNewPost(currentTeamChat)">Send</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="bottom_page">
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('index')"><img class="dropdown_widget" src="src/home.png"></a>
+                </div>
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('schedule')"><img class="widget" src="src/icon.png"></a>
+                </div>
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('all_teams')"><img class="dropdown_widget" src="src/white-teamwork.png"></a>
+                </div>
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('contact')"><img class="dropdown_widget" src="src/white-phone-receiver.png"></a>
+                </div>
+                <div class="home_div">
+                    <a v-on:click="setCurrentView('chat')"><img class="dropdown_widget" src="src/dropdowncomments.png"></a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+    var config = {
+        apiKey: "AIzaSyDCBTH0nQ7Xh-j5H4CQOIuq0jFzg8qBm1Y",
+        authDomain: "mobilenysl.firebaseapp.com",
+        databaseURL: "https://mobilenysl.firebaseio.com",
+        projectId: "mobilenysl",
+        storageBucket: "mobilenysl.appspot.com",
+        messagingSenderId: "148091095972"
+    };
+    firebase.initializeApp(config);
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="script/app.js"></script>
+
+
+</html>
