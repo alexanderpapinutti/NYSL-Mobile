@@ -1,6 +1,6 @@
-# A Blank PhoneGap App
+# An organizational app for the North Youth Soccer League. Ubiqum project. 
 
-## Usage
+## Parents and league partcipants can chat with each other and find out when and where next matches are.
 
 ### PhoneGap CLI
 
